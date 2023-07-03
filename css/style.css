@@ -3,16 +3,36 @@
     margin: 0;
     padding: 0;
 }
-/*! ########################## header */
+section{
+    padding: 3rem 0;
+}
+img{
+    width: 100%;
+}
+button{
+    padding: .8rem 3rem;
+    border-radius: 50px;
+    border: none;
+    letter-spacing: .2rem;
+}
+:root{
+    --col1:#0084fd;
+    --col2:#b5ddff;
+}
+
+/*! ############## header ########## */
 header{
-    background-color: #0084fd;
+    background-color: var(--col1);
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    padding: 1rem;
+    padding: 1rem 0;
 }
-
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
 nav>ul{
     list-style-type: none;
 }
@@ -41,7 +61,7 @@ li>a{
     top: 70px;
     right:0 ;
     left: 0;
-    background-color: #0084fd;
+    background-color: var(--col1);
     padding: 1rem;
 }
 
@@ -53,6 +73,40 @@ nav>ul>li:hover{
     background-color: #49a7ff;
 }
 
+/* !############# CARDS ########### */
+
+.card{
+    padding: 0 2rem ;
+    border-radius: 35px;
+}
+.card h3{
+    font-size: 1.5rem;
+}
+.card p{
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+.card_img>i{
+    text-align: center;
+    font-size: 7rem;
+    padding: 2rem;
+}
+
+.bottom{
+    margin-bottom: -5px;
+}
+
+.col-set-1{
+    background-color: var(--col2);
+    color: var(--col1);
+}
+.col-set-1 p{
+    color:#5a6e7f
+}
+.large{
+    padding: 2rem 2rem 0 2rem ;
+}
 /* ! utils */
 
 .flex{
@@ -63,6 +117,27 @@ nav>ul>li:hover{
 }
 .between{
     justify-content: space-between;  
+}
+.col{
+    width: 100%;
+}
+.switch{
+    flex-direction: column;
+}
+.gap{
+    gap: 2rem;
+}
+.n1{
+    order: 1;
+}
+.n2{
+    order: 2;
+}
+n3{
+    order: 3;
+}
+.txt-center{
+    text-align: center;
 }
 /* ! media query */
 
@@ -98,6 +173,10 @@ nav>ul>li:hover{
     }
     .container{
         width: 100%;
+    }
+    header>div>.logo{
+        position: relative;
+        top:7px
     }
 }
 @media screen and (min-width: 1200px) {

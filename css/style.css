@@ -13,6 +13,12 @@ button{
     border: none;
     letter-spacing: .2rem;
     width: fit-content;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+button i{
+    font-size: 1.5rem
 }
 :root{
     --col1:#0084fd;
@@ -115,7 +121,10 @@ section:nth-child(even):not(:first-child):not(#planning) .card{
     color: #777777;
     font-weight: 200;
 }
-
+#about h2{
+    font-size: 4rem;
+    color: #9593e6;
+}
 
 /*son !############# CARDS ########### */
 
@@ -179,6 +188,7 @@ section:nth-child(even):not(:first-child):not(#planning) .card{
     overflow: hidden;
     background-color:#e9ebea ;
     margin: 2rem;
+    position: relative;
 }
 .bullet-img img{
     scale: 1.6;
@@ -199,6 +209,36 @@ section:nth-child(even):not(:first-child):not(#planning) .card{
     margin-top: auto;
 }
 
+.quotes-img{
+    font-size: 5rem;
+    color: #9593e6;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    z-index: 1;
+}
+.quote-bullet{
+    position: relative;
+    width: 200px;
+}
+.quotes-img{
+    width: fit-content;
+}
+#about .bullet-img img{
+    scale: 1;
+    transform: translate(0, 0px);
+}
+.quote-txt{
+    color: #9593e6;
+    font-size: 2rem;
+    font-weight: 600;
+}
+#about button{
+    background-color: #9593e6;
+    color: #fff;
+}
+
 /* main #############! utils ########### */
 .txt-align{
     text-align: center;
@@ -209,9 +249,7 @@ section:nth-child(even):not(:first-child):not(#planning) .card{
 .ycenter{
     align-items: center;
 }
-.xcenter{
-    justify-content: ;
-}
+
 .between{
     justify-content: space-between;  
 }
@@ -269,6 +307,12 @@ n3{
     }
     .col1-3{
         width: calc((100% - 4rem) / 2);
+    }
+    .col50{
+        width: width: calc((100% - 4rem) / 2);
+    }
+    #about .switch{
+        flex-direction: row;
     }
     #intro>.card-container{
         flex-wrap: wrap;

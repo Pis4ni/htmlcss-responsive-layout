@@ -238,6 +238,20 @@ section:nth-child(even):not(:first-child):not(#planning) .card{
     background-color: #9593e6;
     color: #fff;
 }
+.big-gold{
+    font-size: 4rem;
+    font-weight: 700;
+    color:#fdc15f ;
+}
+#get_started>div>*{
+    padding: 1rem 0;
+}
+#get_started button{
+    color: #9593e6;
+}
+#get_started a{
+    color: #fff;
+}
 
 /* main #############! utils ########### */
 .txt-align{

@@ -1,3 +1,4 @@
+/* main ############## GENERALS ########## */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -19,8 +20,21 @@ button{
     --col1:#0084fd;
     --col2:#b5ddff;
 }
+h2{
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+h3{
+    font-size: 2.3rem;
+}
+p{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: .05rem;
+}
 
-/*! ############## header ########## */
+/*son ############## header ########## */
 header{
     background-color: var(--col1);
     position: sticky;
@@ -30,7 +44,7 @@ header{
     padding: 1rem 0;
 }
 .container{
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
 }
 nav>ul{
@@ -73,7 +87,14 @@ nav>ul>li:hover{
     background-color: #49a7ff;
 }
 
-/* !############# CARDS ########### */
+/*son ############# SECTION ########### */
+section:nth-of-type(even){
+    background-color:#9593e6 ;
+    color: #fff;
+}
+
+
+/*son !############# CARDS ########### */
 
 .card{
     padding: 0 2rem ;
@@ -104,10 +125,24 @@ nav>ul>li:hover{
 .col-set-1 p{
     color:#5a6e7f
 }
+.col-set-2{
+    background-color: #fff;
+    color: #000;
+}
 .large{
     padding: 2rem 2rem 0 2rem ;
 }
-/* ! utils */
+.down-btn{
+    border-radius: 50%;
+    padding: .8rem 1rem;
+    background-color: #9593e6;
+    margin: 1rem;
+}
+#planning .card>p{
+    font-style: italic;
+    font-weight: 400;
+}
+/* main #############! utils ########### */
 
 .flex{
     display: flex;
@@ -136,10 +171,14 @@ nav>ul>li:hover{
 n3{
     order: 3;
 }
+.wrap{
+    flex-wrap: wrap;
+}
+
 .txt-center{
     text-align: center;
 }
-/* ! media query */
+/*main ############### media query ########### */
 
 /* main tablet */
 @media screen and (min-width: 576px) {
@@ -178,6 +217,29 @@ n3{
         position: relative;
         top:7px
     }
+    main>section>.card-container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .col:first-child{
+        width: calc(((100% - 4rem) / 3) * 2);    
+    }
+
+    .col{
+        width: calc((100% - 4rem) / 3);
+    }
+    .large{
+        flex-direction: row;
+        height: 100%;
+    }
+    .crd-col{
+        width: 50%;
+        overflow: hidden;
+    }
+    .large>div>img{
+        margin-bottom: -320px;
+    }
+
 }
 @media screen and (min-width: 1200px) {
     .container{

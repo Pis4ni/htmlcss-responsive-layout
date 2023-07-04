@@ -4,9 +4,6 @@
     margin: 0;
     padding: 0;
 }
-section{
-    padding: 3rem 0;
-}
 img{
     width: 100%;
 }
@@ -42,11 +39,9 @@ header{
     left: 0;
     right: 0;
     padding: 1rem 0;
+    z-index: 10;
 }
-.container{
-    width: 85%;
-    margin: 0 auto;
-}
+
 nav>ul{
     list-style-type: none;
 }
@@ -88,9 +83,19 @@ nav>ul>li:hover{
 }
 
 /*son ############# SECTION ########### */
+section{
+    padding: 3rem 0;
+}
 section:nth-of-type(even){
     background-color:#9593e6 ;
     color: #fff;
+}
+section:nth-child(odd):not(:first-child) .card{
+    background-color:#9593e6 ;
+    color: #fff;
+}
+#testimonials h2{
+    color: #9593e6;
 }
 
 
@@ -142,18 +147,53 @@ section:nth-of-type(even){
     font-style: italic;
     font-weight: 400;
 }
+.sec-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+.bullet-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:#e9ebea ;
+    margin: 2rem;
+}
+.bullet-img img{
+    scale: 1.6;
+    transform: translate(0, 20%);
+}
+.testimonial-quote{
+    text-align: center;
+}
+.testimonial-quote .esile{
+    font-weight: 100;
+}
 /* main #############! utils ########### */
-
+.txt-align{
+    text-align: center;
+}
 .flex{
     display: flex;
 }
 .ycenter{
     align-items: center;
 }
+.xcenter{
+    justify-content: ;
+}
 .between{
     justify-content: space-between;  
 }
 .col{
+    width: 100%;
+}
+.col100{
+    width: 100%;
+}
+.col50{
     width: 100%;
 }
 .switch{
@@ -178,15 +218,49 @@ n3{
 .txt-center{
     text-align: center;
 }
+.col2-3{
+    width: 100% ;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+.container-smaller{
+    width: 700px;
+    margin: 0 auto;
+}
 /*main ############### media query ########### */
 
-/* main tablet */
+/*son tablet */
 @media screen and (min-width: 576px) {
-    
+    .col2-3 {
+        width: calc(((100% - 4rem) / 3) *2);
+    }
+    .col{
+        width: calc((100% - 4rem) / 3);
+    }
+    #intro>.card-container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #intro .card-container>.col:nth-last-of-type(4) .card{
+        height: 100%;
+    }
+    #intro .card-container>.col:nth-last-of-type(4) .card p{
+        margin-bottom: auto;
+    }
+    #testimonials .card{
+        flex-direction: row;
+    }
+    #testimonials .card .testimonial-quote{
+        width: 60%;
+        text-align: start;
+    }
 }
 
-/* main laptop */
+/*son laptop */
 @media screen and (min-width: 992px) {
+    /* * header */
     .menu-wrap-target{
         display: block;
     }
@@ -210,9 +284,6 @@ n3{
         background-color: #fff;
         color: #0084fd;
     }
-    .container{
-        width: 100%;
-    }
     header>div>.logo{
         position: relative;
         top:7px
@@ -220,6 +291,10 @@ n3{
     main>section>.card-container{
         flex-wrap: wrap;
         flex-direction: row;
+    }
+    /* * layout */
+    .container{
+        width: 80%;
     }
     .col:first-child{
         width: calc(((100% - 4rem) / 3) * 2);    
@@ -232,6 +307,7 @@ n3{
         flex-direction: row;
         height: 100%;
     }
+    /* * cards */
     .crd-col{
         width: 50%;
         overflow: hidden;
@@ -240,11 +316,41 @@ n3{
         margin-bottom: -320px;
     }
 
+    .col50{
+        width: calc((100% - 4rem) / 2);
+    }
+    #planning .card-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #planning .card-container {
+        align-items: flex-end;
+    }
+
+    #testimonials .card{
+        flex-direction: row;
+    }
+    #testimonials .card .testimonial-quote{
+        width: 60%;
+        text-align: start;
+    }
+
 }
+/*son HD 2K 4K */
 @media screen and (min-width: 1200px) {
     .container{
         width: 1000px;
         margin: 0 auto;
+    }
+    .col50{
+        width: calc((100% - 4rem) / 2);
+    }
+    #planning .card-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #planning .card-container {
+        align-items: flex-end;
     }
 }
 
